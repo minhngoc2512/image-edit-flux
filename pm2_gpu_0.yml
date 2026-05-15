@@ -1,0 +1,8 @@
+apps:
+  - name: "image_flux_process_0"
+    script: ".venv/bin/vllm serve black-forest-labs/FLUX.2-klein-9B   --omni   --port 8070   --quantization fp8   --gpu-memory-utilization 0.92"
+    instances: 1
+    autorestart: true
+    env:
+      VLLM_FLASH_ATTN_VERSION: 2
+      HF_TOKEN: "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"

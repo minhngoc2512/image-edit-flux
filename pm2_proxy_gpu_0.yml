@@ -1,0 +1,25 @@
+apps:
+  - name: "image_flux_proxy_0_0"
+    script: ".venv/bin/uvicorn server:app --host 0.0.0.0 --port 8030"
+    instances: 1
+    autorestart: true
+    env:
+      VLLM_SERVER_URL: "http://localhost:8070"
+  - name: "image_flux_proxy_0_1"
+    script: ".venv/bin/uvicorn server:app --host 0.0.0.0 --port 8031"
+    instances: 1
+    autorestart: true
+    env:
+      VLLM_SERVER_URL: "http://localhost:8070"
+  - name: "image_flux_proxy_0_2"
+    script: ".venv/bin/uvicorn server:app --host 0.0.0.0 --port 8032"
+    instances: 1
+    autorestart: true
+    env:
+      VLLM_SERVER_URL: "http://localhost:8070"
+  - name: "image_flux_proxy_0_3"
+    script: ".venv/bin/uvicorn server:app --host 0.0.0.0 --port 8033"
+    instances: 1
+    autorestart: true
+    env:
+      VLLM_SERVER_URL: "http://localhost:8070"

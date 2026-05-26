@@ -5,4 +5,4 @@ apps:
     autorestart: true
     env:
       VLLM_FLASH_ATTN_VERSION: 2
-      HF_TOKEN: "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"
+      HF_TOKEN: "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"

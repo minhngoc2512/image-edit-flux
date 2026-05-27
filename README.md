@@ -10,7 +10,7 @@ source .venv/bin/activate
 ```
 2. Install packages
 ```
-export HF_TOKEN=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
+export HF_TOKEN=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
 export VLLM_FLASH_ATTN_VERSION=2
 
 pip install -r requiements.txt
